@@ -3,7 +3,7 @@
 # Function to attach to SSH process and extract password attempts
 attach_ssh () {
     # Capture the lines containing password attempts by tracing the process
-    PASSWORD_LINES=$(strace -p $1 2>&1 | grep 'read(6, \"\\f')
+    PASSWORD_LINES=$(strace -e trace=read -p $1 2>&1 | grep 'read(6, \"\\f')
 
 	# Extract lines containing the SSH username and port information from the auth.log file
 	USERNAME_LINES=$(journalctl -u ssh.service | grep ssh[d].$pid.*port)
