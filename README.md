@@ -33,14 +33,14 @@ Password Attempt 1: "thegame"
 
 ```
 
-#To install as a service
+# To install as a service
 ```
 ┌──(root㉿kali)-[/mnt/hgfs/work/scripting/scanFoolery/scanFoolery]
 └─# ./persist.sh 
 Created symlink /etc/systemd/system/multi-user.target.wants/ssh-logging.service → /etc/systemd/system/ssh-logging.service.
 ```
 
-#Log output
+# Log output
 ```
 ┌──(root㉿kali)-[~]
 └─# tail -f ssh_pass.log 
