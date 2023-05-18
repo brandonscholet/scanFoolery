@@ -18,7 +18,7 @@ attach_ssh () {
     # Print and log the username lines containing the user or IP information	
     echo "$USERNAME_LINES" | egrep --color "(user|for).(\w)*"   |tee -a /root/ssh_pass.log
 	
-	if [[ ! -z $sshloginpids ]]; then
+	if [[ -z $sshloginpids ]]; then
 		echo "No Password Attempt Found" |tee -a /root/ssh_pass.log
 	else
 		# Loop through each line containing a password attempt
