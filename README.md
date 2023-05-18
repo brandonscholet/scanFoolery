@@ -2,12 +2,12 @@
 
 This tool will dump password authentication attempts to the SSH daemon.
 
-Every SSHD child process will get attached to and at the completetionm of the process, the attempted passwords and connection logs will be dumped to the script.
+Every SSHD child process will get attached to and at the completetion of the process, the attempted passwords and connection logs will be dumped to the script.
 
-This is handy if you are on a pentest and the client scans comouters in their networks and attempts to authenticate with Domain Admin credentials. Looking at you Landsweeper.
+This is handy if you are on a pentest and the client scans computers in their networks and attempts to authenticate with Domain Admin credentials. Looking at you Landsweeper.
 
 # Prerequisites
-sudo apt isntall strace
+sudo apt install strace
 
 # Usage
 
