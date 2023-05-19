@@ -4,7 +4,7 @@ This tool will dump password authentication attempts to the SSH daemon.
 
 Every SSHD child process will get attached to and at the completetion of the process, the attempted passwords and connection logs will be dumped to the script.
 
-This is handy if you are on a pentest and the client scans computers in their networks and attempts to authenticate with Domain Admin credentials. Looking at you Landsweeper.
+This is handy if you are on a pentest and the client scans computers in their networks and attempts to authenticate with Domain Admin credentials. Looking at you Lansweeper.
 
 # Prerequisites
 sudo apt install strace
@@ -13,7 +13,7 @@ sudo apt install strace
 
 ```
 
-┌──(root㉿kali)-[/mnt/hgfs/work/scripting/scanFoolery/scanFoolery]
+┌──(root㉿kali)-[~/scanFoolery]
 └─# ./checkmate.sh 
 Found Pid: 1076220. Attaching...
 May 18 12:43:55 kali sshd[1076220]: Invalid user frank from 172.25.25.131 port 56943
@@ -35,7 +35,7 @@ Password Attempt 1: "thegame"
 
 # To install as a service
 ```
-┌──(root㉿kali)-[/mnt/hgfs/work/scripting/scanFoolery/scanFoolery]
+┌──(root㉿kali)-[~/scanFoolery]
 └─# ./persist.sh 
 Created symlink /etc/systemd/system/multi-user.target.wants/ssh-logging.service → /etc/systemd/system/ssh-logging.service.
 ```
